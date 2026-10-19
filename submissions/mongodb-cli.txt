@@ -1,0 +1,62 @@
+test> show databases
+admin   100.00 KiB
+config   12.00 KiB
+giftdb   40.00 KiB
+local    72.00 KiB
+
+test> use giftdb
+switched to db giftdb
+giftdb> show collections
+gifts
+giftdb> db.gifts.countDocuments()
+16
+giftdb> db.gifts.find().limit(2)
+[
+  {
+    _id: ObjectId('6ad6303d9c09391a08358eaa'),
+    id: '875',
+    name: 'Lamp',
+    category: 'Kitchen',
+    condition: 'New',
+    posted_by: '26872',
+    zipcode: '94805',
+    date_added: 1693267200,
+    age_days: 400,
+    age_years: 1.1,
+    description: "A charming lamp that's been lighting up my reading nook...",
+    image: '/images/lamp.jpeg'
+  },
+  {
+    _id: ObjectId('6ad6303d9c09391a08358eab'),
+    id: '396',
+    name: 'Curtain',
+    category: 'Office',
+    condition: 'Older',
+    posted_by: '26872',
+    zipcode: '94504',
+    date_added: 1686960000,
+    age_days: 1073,
+    age_years: 2.94,
+    description: 'Elegant, flowy curtains that have graced my living room windows...',
+    image: '/images/curtains1.jpeg'
+  }
+]
+
+
+giftdb> db.gifts.find({"id":"429"})
+[
+  {
+    _id: ObjectId('6ad6303d9c09391a08358eb8'),
+    id: '429',
+    name: 'Side Table',
+    category: 'Living Room',
+    condition: 'Older',
+    posted_by: '23789',
+    zipcode: '94102',
+    date_added: 1677715200,
+    age_days: 1100,
+    age_years: 3.01,
+    description: 'This side table has been a convenient spot for lamps and books...',
+    image: '/images/side-table.jpeg'
+  }
+]

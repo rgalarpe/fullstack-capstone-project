@@ -1,0 +1,8 @@
+[theia: import-mongo]
+$ npm start
+
+> import-mongo@1.0.0 start
+> node index.js
+
+Connected successfully to server
+Inserted documents: 16
