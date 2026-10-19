@@ -2,8 +2,8 @@
 name: User Story
 about: Fullstack POC issue template
 title: ''
-labels: ''
-assignees: ''
+labels: new
+assignees: rgalarpe
 
 ---
 
