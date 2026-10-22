@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const pinoLogger = require('./logger');
+const authRoutes = require('./routes/authRoutes');
 
 const connectToDatabase = require('./models/db');
 const {loadData} = require("./util/import-mongo/index");
@@ -31,6 +32,8 @@ const giftRoutes = require('./routes/giftRoutes');
 
 const pinoHttp = require('pino-http');
 const logger = require('./logger');
+
+app.use('/api/auth', authRoutes);
 
 app.use(pinoHttp({ logger }));
 
