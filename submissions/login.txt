@@ -1,0 +1,4 @@
+$ curl --location 'http://localhost:3060/api/auth/login' --header 'Content-Type: application/json' --data-raw '{                                                                                                         "email": "lachie@gmail.com",
+    "password": "lac123"
+}'
+{"authtoken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNmFkYzc0N2UyMzU2Mjk1YzIyZmI4Y2Q3In0sImlhdCI6MTc5MjgzMjY2Mn0.FyGDXDOamdFW4rv1f1oRYzTC5hi3JubQOk5GLFmhW5k","userName":"Lachlan","userEmail":"lachie@gmail.com"}theia@theiaopenshift-rommelcgalar:/home/project$ 
