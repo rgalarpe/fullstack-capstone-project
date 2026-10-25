@@ -1,0 +1,3 @@
+https://rommelcgalar-3060.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai - react serverapp
+
+https://giftwebsite.2gcga6x6k7uq.us-south.codeengine.appdomain.cloud -kubed app deployed site 

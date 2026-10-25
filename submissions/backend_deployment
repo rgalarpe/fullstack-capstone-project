@@ -1,0 +1,4 @@
+theia@theiadocker-rommelcgalar:/home/project/fullstack-poc$ kubectl get deployments
+NAME                 READY   UP-TO-DATE   AVAILABLE   AGE
+giftapp              2/2     2            2           18m
+mongodb-deployment   1/1     1            1           54m
