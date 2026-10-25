@@ -1,3 +1,4 @@
+/*jshint esversion: 8 */
 const express = require('express');
 const router = express.Router();
 const connectToDatabase = require('../models/db');
@@ -43,6 +44,19 @@ router.get('/:id', async (req, res) => {
     } catch (e) {
         console.error('Error fetching gift:', e);
         res.status(500).send('Error fetching gift');
+    }
+});
+
+// Add a new gift
+router.post('/', async (req, res, next) => {
+    try {
+        const db = await connectToDatabase();
+        const collection = db.collection("gifts");
+        const gift = await collection.insertOne(req.body);
+
+        res.status(201).json(gift.ops[0]);
+    } catch (e) {
+        next(e);
     }
 });
 
