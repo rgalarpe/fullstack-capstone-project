@@ -52,6 +52,9 @@ setUpdatedDetails({
 });
 };
 const handleSubmit = async () => {
+    const authtoken = sessionStorage.getItem("auth-token");
+    const email = sessionStorage.getItem("email");
+    const payload = { ...updatedDetails };
     try {
         const response = await fetch(`${urlConfig.backendUrl}/api/auth/update`, {
             //Task 1: set method
